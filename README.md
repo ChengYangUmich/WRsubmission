@@ -13,7 +13,7 @@
 **Publication DOI:** 
 
 ## Overview 
-This repo provides the source code and implementation details of this paper. While the authors are not allowed to share meta-information of sensor data, the research data are anonymized without date information.
+This repo provides the source code and implementation details of this paper. While the authors are not allowed to share meta-information of sensor data, the research data are anonymized without date and they have already been processed.
 
 ## Contents 
 
@@ -30,4 +30,28 @@ This MATLAB live script contains the implementation details of the paper, includ
 - `yBOD.mat`, the composite data analyzed by APHA methods. A 688-by-1 vector
 - `xflow`, the realtime flow sensor measurements. A 688-by-720 matrix. 
 - `xDiurnal.mat`, the separated daily diurnal patterns in this study. A 688-by-720 matrix 
-- `xLeachate.mat`, the separated daily Leachate patterns in this study. A 688-by-720 matrix
+- `xLeachate.mat`, the separated daily Leachate patterns in this study. A 688-by-720 matrix 
+
+### Functions 
+- `separatePattern.m` The function used to separate the diurnal patterns and leachate patterns in this paper. 
+- `hhlsngd.m` Huber-Hinge least squares Nesterov's accelerate gradient descent function.  Used to solve the equation (3) in paper 
+- `hubhin.m` The Huber-Hinge loss function. 
+- `dhubhun.m` The derivative Huber-Hinge function. 
+- `singleTSplot.m` A function to plot daily profiles, serves a purpose of formating the ticks, labels and axes in a figure. 
+- `gapFilling.m` a data remediation algorithm to fill in large gaps in dirty signals.(Still under development). 
+
+
+### Scripts 
+-`separatePatternScript.m` A script to separate all daily profiles. 
+
+
+### Folders 
+`688Results` 
+- `clean` a folder stores pictures whose days are labelled as clean 
+- `dirty` a folder stores pictures whose days are labelled as drity 
+- `Misclassification cases` a folder stores misclassified results 
+  - `Without SI - logistic regression on distribution` False negative + False postive cases
+  - `With SI - logistic regression on distribution` Improved results with SI, False negative + False postive cases + reduced cases of False negative 
+  
+## Additional Note 
+Algorithms used is highly customized for this study, including hyperparameters, such as the Fourier terms order, Huber-Hinge window size, penalty coefficient. Brrowing algoritms here and applying to others requires additional and careful effort of customization. Besides, the gradient descent solver function `hhlsngd.m` is quite coarse and maybe unstable under some conditions.
