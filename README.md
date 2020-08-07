@@ -14,3 +14,4 @@ This repo provides the source code and implementation details of this paper. Whi
 
 ## Contents 
 
+<img align="left" src="Graphical Abstract.tif" width="800">
