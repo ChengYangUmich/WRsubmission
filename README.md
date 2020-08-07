@@ -20,6 +20,14 @@ This repo provides the source code and implementation details of this paper. Whi
 ### Implementation 
 
 `Paper_Code_Implementation.mlx` 
+
 This MATLAB live script contains the implementation details of the paper, including the source codes that generating figures in the paper 
 
-### Anonymous data
+### Anonymous data 
+
+- `xBOD.mat`, the dataset used in this study, whose rows are daily BOD5 sensor signal profiles. A 688-by-720 matrix. 
+- `data_label.mat`, the labels of wheather a day is a clearn or dirty signal profile. `0` for clean and `1` for dirty. A 688-by-1 vector.
+- `yBOD.mat`, the composite data analyzed by APHA methods. A 688-by-1 vector
+- `xflow`, the realtime flow sensor measurements. A 688-by-720 matrix. 
+- `xDiurnal.mat`, the separated daily diurnal patterns in this study. A 688-by-720 matrix 
+- `xLeachate.mat`, the separated daily Leachate patterns in this study. A 688-by-720 matrix
