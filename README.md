@@ -42,7 +42,7 @@ This MATLAB live script contains the implementation details of the paper, includ
 
 
 ### Scripts 
--`separatePatternScript.m` A script to separate all daily profiles. 
+`separatePatternScript.m` A script to separate all daily profiles. 
 
 
 ### Folders 
@@ -54,4 +54,4 @@ This MATLAB live script contains the implementation details of the paper, includ
   - `With SI - logistic regression on distribution` Improved results with SI, False negative + False postive cases + reduced cases of False negative 
   
 ## Additional Note 
-Related algorithms are highly customized for this study, including hyperparameters,(e.g. the Fourier terms, Huber-Hinge regularization, penalty coefficient etc.). Applying these algoritms to other studys requires additional and careful effort of customization. Besides, the gradient descent solver function `hhlsngd.m` is quite coarse and maybe unstable under some conditions.
+Related algorithms are highly customized for this study, including hyperparameters (e.g. the Fourier terms, Huber-Hinge regularization, penalty coefficient etc.) and the way functions are evaluated. Applying these algoritms to other studys requires additional and careful effort of customization. Besides, the gradient descent solver function `hhlsngd.m` is quite coarse and maybe unstable under some conditions.
