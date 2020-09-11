@@ -10,7 +10,7 @@
 
 <img align="center" src="Graphical Abstract.png" width="800">
 
-**Publication DOI:** 
+**Publication DOI:** https://doi.org/10.1016/j.watres.2020.116282
 
 ## Overview 
 This repo provides the source code and implementation details of this paper. While the authors are not allowed to share meta-information of sensor data, the research data are anonymized without date and they have already been processed.
